@@ -1,0 +1,139 @@
+.services{
+    @include res('padding-top', 42px);
+    @include media(575){
+        @include resa('padding-top', 30px);
+    }
+    &__title{
+        color: #000;
+        @include res('font-size', 30px);
+        @include res('letter-spacing', -0.3px);
+        line-height: 120%;
+        font-weight: 400;
+        @include res('margin-bottom', 30px);
+        @include media(575){
+            @include resa('font-size', 30px);
+            @include resa('letter-spacing', -0.3px);
+            @include resa('margin-bottom', 30px);
+        }
+    }
+    &__slider{
+        width: 100%;
+        position: relative;
+    }
+    .swiper{
+        @include res('max-width', 842px);
+        width: 100%;
+        overflow: hidden;
+        @include media(575){
+            @include resa('max-width', 255px);
+        }
+        &-wrapper{
+            display: flex;
+            width: max-content;
+        }
+    }
+    &__card{
+        background: #F5F5F5;
+    }
+    &__img{
+        width: 100%;
+        @include res('height', 170px);
+        @include media(575){
+            height: auto;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content{
+        @include res('padding-top', 19px);
+        @include res('padding-bottom', 19px);
+        @include res('padding-left', 24px);
+        @include res('padding-right', 24px);
+        @include media(575){
+            @include resa('padding-top', 19px);
+            @include resa('padding-bottom', 19px);
+            @include resa('padding-left', 24px);
+            @include resa('padding-right', 24px);
+        }
+    }
+    &__subtitle{
+        color: #000;
+        @include res('font-size', 14px);
+        @include res('letter-spacing', -0.14px);
+        line-height: 120%;
+        font-weight: 700;
+        @include res('margin-bottom', 14px);
+        @include media(575){
+            @include resa('font-size', 14px);
+            @include resa('letter-spacing', -0.14px);
+            @include resa('margin-bottom', 14px);
+        }
+    }
+    &__desc{
+        color: #000;
+        @include res('font-size', 12px);
+        @include res('letter-spacing', -0.12px);
+        line-height: 120%;
+        font-weight: 400;
+        @include res('margin-bottom', 31px);
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('letter-spacing', -0.12px);
+            @include resa('margin-bottom', 31px);
+        }
+    }
+    &__link{
+        color: #D02128;
+        @include res('font-size', 12px);
+        @include res('letter-spacing', -0.12px);
+        line-height: 120%;
+        font-weight: 400;
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('letter-spacing', -0.12px);
+        }
+    }
+    &__btn-next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        @include res('width', 60px);
+        @include res('height', 60px);
+        border-radius: 50%;
+        border: solid #D02128;
+        @include res('border-width', 2px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms ease;
+        @include media(575){
+            @include resa('right', 30px);
+            @include resa('width', 60px);
+            @include resa('height', 60px);
+            @include resa('border-width', 2px);
+        }
+        &:hover{
+            background: #D02128;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+        svg{
+            @include res('width', 34px);
+            @include media(575){
+                @include resa('width', 34px);
+            }
+            path{
+                transition: 300ms ease;
+                fill: #D02128;
+            }
+        }
+    }
+}

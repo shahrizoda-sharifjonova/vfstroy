@@ -2,9 +2,30 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+const swiper = new Swiper();
+
+new Swiper(".services__swiper", {
+    grabCursor: true,
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    watchSlidesProgress: true,
+    navigation:{
+        nextEl: '.services__btn-next',
+    },
+    breakpoints:{
+        1200:{
+            spaceBetween: 30,
+        },
+        576:{
+            slidesPerView: 3,
+            spaceBetween: 15,
+        }
+    }
+}); 
 
 const dropdowns = document.querySelectorAll('.header__dropdown');
 const contents = document.querySelectorAll('.header__dropdown-content');
