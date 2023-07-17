@@ -18,6 +18,7 @@ new Swiper(".services__swiper", {
     },
     breakpoints:{
         1200:{
+            slidesPerView: 3,
             spaceBetween: 30,
         },
         576:{
