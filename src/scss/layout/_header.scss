@@ -2,6 +2,7 @@
     @include res('padding-top', 6px);
     position: relative;
     isolation: isolate;
+    z-index: 50;
     @include media(575){
         background: #F5F5F5;
         @include resa('padding-top', 26px);
@@ -28,7 +29,7 @@
         @include res('width', 167px);
         @include res('margin-right', 22px);
         position: relative;
-        z-index: 2;
+        z-index: 52;
         @include media(575){
             @include resa('width', 167px);
             margin-right: 0;
@@ -44,7 +45,7 @@
         position: relative;
         @include resa('width', 31px);
         @include resa('height', 26px);
-        z-index: 2;
+        z-index: 52;
         @include media(575){
             display: flex;
         }
@@ -100,7 +101,7 @@
             flex-direction: column;
             align-items: flex-start;
             background: #FFF;
-            z-index: 1;
+            z-index: 51;
             @include resa('padding-top', 106px);
             left: 0;
             justify-content: space-between;

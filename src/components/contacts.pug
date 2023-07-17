@@ -1,0 +1,22 @@
+mixin contacts()
+    .contacts
+        .contacts__body.container 
+            .contacts__content 
+                .contacts__item 
+                    .contacts__img 
+                        img(src="@img/location.svg", alt="")
+                    .contacts__right 
+                        p.contacts__subtitle Адрес офиса
+                        p.contacts__link 115230, Москва, Электролитный проезд,дом 3 стр.28, оф.204 Офисно - складской комплекс “Фаворит”
+                .contacts__item 
+                    .contacts__img 
+                        img(src="@img/phone-icon.svg", alt="")
+                    .contacts__right 
+                        p.contacts__subtitle Телефон
+                        a(href="tel::+7(495)64-614-64").contacts__link +7 (495) 64-614-64
+                .contacts__item 
+                    .contacts__img 
+                        img(src="@img/mail.svg", alt="")
+                    .contacts__right 
+                        p.contacts__subtitle Почта
+                        a(href="mailto::info@vfstroy.ru").contacts__link info@vfstroy.ru
