@@ -1,7 +1,7 @@
 .advantages{
     @include res('padding-top', 38px);
     @include media(575){
-        @include resa('padding-top', 30px);
+        @include resa('padding-top', 10px);
     }
     &__content{
         @include res('padding-top', 33px);

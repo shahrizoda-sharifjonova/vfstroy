@@ -1,87 +1,92 @@
 mixin intro()
     .intro 
-        .intro__body.container 
-            h1.intro__title «ПРАВИЛО» - центр малоэтажного домостроения.
-            p.intro__p 850+ Заказчиков доверили нам свои дома
-            p.intro__p Выбери свой проект из 3000 готовых проектов
-            form(action="").intro__form
-                .intro__dropdown 
-                    button(type="button").intro__dropdown-btn Общая площадь
-                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
-                        </svg>
-                    .intro__dropdown-content 
-                        .intro__item 
-                            p.intro__p От
-                            input(type="text").intro__input
-                        .intro__item 
-                            p.intro__p До
-                            input(type="text").intro__input
-                .intro__dropdown 
-                    button(type="button").intro__dropdown-btn Количество этажей
-                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
-                        </svg>
-                    .intro__dropdown-content 
-                        .intro__wrapper 
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox1").intro__checkboxes
-                                label(for="checkbox1").intro__label одноэтажный
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox2").intro__checkboxes
-                                label(for="checkbox2").intro__label двухэтажный
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox3").intro__checkboxes
-                                label(for="checkbox3").intro__label трехэтажный
-                .intro__dropdown 
-                    button(type="button").intro__dropdown-btn Архитектурный стиль
-                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
-                        </svg>
-                    .intro__dropdown-content 
-                        .intro__wrapper 
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox4").intro__checkboxes
-                                label(for="checkbox4").intro__label Классический
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox5").intro__checkboxes
-                                label(for="checkbox5").intro__label Райт
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox6").intro__checkboxes
-                                label(for="checkbox6").intro__label Хай-Тек
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox7").intro__checkboxes
-                                label(for="checkbox7").intro__label БарнХаус
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox8").intro__checkboxes
-                                label(for="checkbox8").intro__label Современный
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox9").intro__checkboxes
-                                label(for="checkbox9").intro__label Шале
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox10").intro__checkboxes
-                                label(for="checkbox10").intro__label Особняк
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox11").intro__checkboxes
-                                label(for="checkbox11").intro__label Модерн
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox12").intro__checkboxes
-                                label(for="checkbox12").intro__label Неомодерн
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox13").intro__checkboxes
-                                label(for="checkbox13").intro__label Английский
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox14").intro__checkboxes
-                                label(for="checkbox14").intro__label Скандинавский
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox15").intro__checkboxes
-                                label(for="checkbox15").intro__label Русский
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox16").intro__checkboxes
-                                label(for="checkbox16").intro__label Готика
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox17").intro__checkboxes
-                                label(for="checkbox17").intro__label Эклектика
-                            .intro__checkboxes 
-                                input(type="checkbox" id="checkbox18").intro__checkboxes
-                                label(for="checkbox18").intro__label Замок
+        .intro__body.container
+            .intro__container
+                h1.intro__title «ПРАВИЛО» - центр малоэтажного домостроения.
+                p.intro__p 850+ Заказчиков доверили нам свои дома
+                p.intro__p Выбери свой проект из 3000 готовых проектов
+                form(action="").intro__form
+                    .intro__dropdown 
+                        button(type="button").intro__dropdown-btn Общая площадь
+                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
+                            </svg>
+                        .intro__dropdown-content 
+                            .intro__row
+                                .intro__item 
+                                    p.intro__txt От
+                                    input(type="number").intro__input
+                                .intro__item 
+                                p.intro__txt До
+                                input(type="number").intro__input
+                    .intro__dropdown 
+                        button(type="button").intro__dropdown-btn Количество этажей
+                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
+                            </svg>
+                        .intro__dropdown-content 
+                            .intro__wrapper 
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox1").intro__checkbox
+                                    label(for="checkbox1").intro__label одноэтажный
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox2").intro__checkbox
+                                    label(for="checkbox2").intro__label двухэтажный
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox3").intro__checkbox
+                                    label(for="checkbox3").intro__label трехэтажный
+                    .intro__dropdown 
+                        button(type="button").intro__dropdown-btn Архитектурный стиль
+                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 6L0.803847 0.75L11.1962 0.750001L6 6Z" fill="black"/>
+                            </svg>
+                        .intro__dropdown-content 
+                            .intro__wrapper 
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox4").intro__checkbox
+                                    label(for="checkbox4").intro__label Классический
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox5").intro__checkbox
+                                    label(for="checkbox5").intro__label Райт
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox6").intro__checkbox
+                                    label(for="checkbox6").intro__label Хай-Тек
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox7").intro__checkbox
+                                    label(for="checkbox7").intro__label БарнХаус
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox8").intro__checkbox
+                                    label(for="checkbox8").intro__label Современный
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox9").intro__checkbox
+                                    label(for="checkbox9").intro__label Шале
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox10").intro__checkbox
+                                    label(for="checkbox10").intro__label Особняк
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox11").intro__checkbox
+                                    label(for="checkbox11").intro__label Модерн
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox12").intro__checkbox
+                                    label(for="checkbox12").intro__label Неомодерн
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox13").intro__checkbox
+                                    label(for="checkbox13").intro__label Английский
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox14").intro__checkbox
+                                    label(for="checkbox14").intro__label Скандинавский
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox15").intro__checkbox
+                                    label(for="checkbox15").intro__label Русский
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox16").intro__checkbox
+                                    label(for="checkbox16").intro__label Готика
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox17").intro__checkbox
+                                    label(for="checkbox17").intro__label Эклектика
+                                .intro__checkboxes 
+                                    input(type="checkbox" id="checkbox18").intro__checkbox
+                                    label(for="checkbox18").intro__label Замок
+                    a(href="#!").intro__link.enable-sm Все проекты 
+                    button(type="submit").intro__btn Показать
+                a(href="#!").intro__link.disable-sm Все проекты 

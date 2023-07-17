@@ -1,0 +1,330 @@
+.intro{
+    @include res('padding-top', 22px);
+    @include media(575){
+        @include resa('padding-top', 30px);
+    }
+    &__container{
+        background: url(../img/intro-bg.png) top / cover no-repeat;
+        @include res('padding-top', 28px);
+        @include res('padding-bottom', 10px);
+        @include res('padding-left', 60px);
+        @include res('padding-right', 60px);
+        @include media(575){
+            background: url(../img/intro-bg.png) right / cover no-repeat;
+            @include resa('margin-left', -15px);
+            @include resa('margin-right', -15px);
+            @include resa('padding-top', 47px);
+            @include resa('padding-right', 30px);
+            @include resa('padding-left', 30px);
+            @include resa('padding-bottom', 47px);
+            width: calc(100% + 9.375vw);
+            height: max-content;
+        }
+    }
+    &__title{
+        color: #000;
+        @include res('font-size', 36px);
+        line-height: 120%;
+        @include res('letter-spacing', -0.4px);
+        font-weight: 400;
+        @include res('margin-bottom', 7px);
+        @include media(575){
+            @include resa('font-size', 20px);
+            @include resa('letter-spacing', -0.2px);
+            @include resa('margin-bottom', 10px);
+        }
+    }
+    &__p{
+        color: #535756;
+        @include res('font-size', 16px);
+        @include res('letter-spacing', -0.16px);
+        line-height: 140%;
+        font-weight: 400;
+        @include res('margin-bottom', 10px);
+        @include media(575){
+            @include resa('font-size', 14px);
+            @include resa('letter-spacing', -0.14px);
+            margin-bottom: 0;
+        }
+        &:last-of-type{
+            @include media(575){
+                @include resa('margin-bottom', 16px);
+            }
+        }
+    }
+    &__form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include res('margin-bottom', 22px);
+        @include media(575){
+            flex-direction: column;
+            margin-bottom: 0;
+            align-items: flex-start;
+        }
+    }
+    &__dropdown{
+        position: relative;
+        @include res('margin-right', 20px);
+        @include media(575){
+            margin-right: 0;
+        }
+        &:not(:last-of-type){
+            @include media(575){
+                @include resa('margin-bottom', 16px);
+            }
+        }
+        &:first-of-type{
+            .intro__dropdown-content{
+                @include res('padding-left', 11px);
+                @include res('padding-right', 11px);
+                @include media(575){
+                    @include resa('padding-left', 11px);
+                    @include resa('padding-right', 11px);
+                }
+            }
+        }
+        &:nth-of-type(2){
+            .intro__dropdown-content{
+                @include res('padding-right', 22px);
+                @include media(575){
+                    @include resa('padding-right', 15px);
+                }
+            }
+        }
+        &:nth-of-type(3){
+            .intro__dropdown-content{
+                @include res('width', 168px);
+                @include res('min-width', 168px);
+                @include media(575){
+                    @include resa('width', 168px);
+                    @include resa('min-width', 168px);
+                }
+            }
+        }
+        &-btn{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            color: #000;
+            @include res('font-size', 16px);
+            line-height: 120%;
+            @include res('letter-spacing', -0.16px);
+            font-weight: 400;
+            @include res('padding-top', 4px);
+            @include res('padding-right', 12px);
+            @include res('padding-bottom', 4px);
+            @include res('padding-left', 23px);
+            @include res('border-radius', 15.5px);
+            border: solid #D02128;
+            @include res('border-width', 1px);
+            background: #FFF;
+            @include media(575){
+                @include resa('font-size', 16px);
+                @include resa('letter-spacing', -0.16px);
+                @include resa('padding-top', 4px);
+                @include resa('padding-right', 12px);
+                @include resa('padding-bottom', 4px);
+                @include resa('padding-left', 23px);
+                @include resa('border-radius', 15.5px);
+                @include resa('border-width', 1px);
+            }
+            &.active{
+                svg{
+                    transform: rotate(-180deg)
+                }
+                & ~ .intro__dropdown-content{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            svg{
+                @include res('width', 12px);
+                display: flex;
+                transition: 300ms ease;
+                @include res('margin-left', 28px);
+                @include media(575){
+                    @include resa('width', 12px);
+                    @include resa('margin-left', 28px);
+                }
+            }
+        }
+        &-content{
+            position: absolute;
+            top: calc(100% - 0.313vw);
+            @include res('border-radius', 8px);
+            border: solid #D02128;
+            @include res('border-width', 1px);
+            background: #F3F3F3;
+            @include res('padding-top', 7px);
+            @include res('padding-bottom', 7px);
+            @include res('padding-right', 15px);
+            @include res('padding-left', 15px);
+            @include res('left', 23px);
+            width: max-content;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            @include media(575){
+                @include resa('border-radius', 8px);
+                @include resa('border-width', 1px);
+                @include resa('padding-top', 7px);
+                @include resa('padding-bottom', 7px);
+                @include resa('padding-right', 15px);
+                @include resa('padding-left', 15px);
+                @include resa('left', 23px);
+            }
+        }
+    }
+    &__btn{
+        @include res('padding-top', 4px);
+        @include res('padding-bottom', 4px);
+        @include res('padding-right', 42px);
+        @include res('padding-left', 42px);
+        color: #FFF;
+        @include res('font-size', 16px);
+        @include res('letter-spacing', -0.16px);
+        line-height: 120%;
+        font-weight: 700;
+        @include res('border-radius', 15.5px);
+        background: #D02128;
+        transition: 300ms ease;
+        @include media(575){
+            @include resa('padding-top', 5px);
+            @include resa('padding-bottom', 5px);
+            @include resa('padding-right', 42px);
+            @include resa('padding-left', 42px);
+            @include resa('font-size', 16px);
+            @include resa('letter-spacing', -0.16px);
+            @include resa('border-radius', 15.5px);
+        }
+        &:hover{
+            background: lighten($color: #D02128, $amount: 5);
+        }
+        &:active{
+            background: darken($color: #D02128, $amount: 5);
+        }
+    }
+    &__link{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+        color: #D02128;
+        @include res('font-size', 16px);
+        @include res('letter-spacing', -0.16px);
+        line-height: 120%;
+        font-weight: 400;
+        text-decoration-line: underline;
+        @include media(575){
+            @include resa('font-size', 16px);
+            @include resa('letter-spacing', -0.16px);
+            margin-left: 0;
+            @include resa('margin-top', 16px);
+            @include resa('margin-bottom', 25px);
+        }
+        &.disable-sm{
+            @include media(575){
+                display: none;
+            }
+        }
+        &.enable-sm{
+            display: none;
+            @include media(575){
+                display: block;
+            }
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        &:nth-of-type(1){
+            @include res('margin-right', 20px);
+        }
+    }
+    &__txt{
+        color: #000;
+        @include res('font-size', 12px);
+        @include res('letter-spacing', -0.12px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 400;
+        @include res('margin-right', 8px);
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('letter-spacing', -0.12px);
+            @include resa('margin-right', 8px);
+        }
+    }
+    &__input{
+        @include res('width', 38px);
+        @include res('padding', 3px);
+        @include res('height', 17px);
+        background: transparent;
+        border: solid #000;
+        @include res('border-width', 0.3px);
+        color: #000;
+        @include res('font-size', 12px);
+        @include res('letter-spacing', -0.12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include media(575){
+            @include resa('width', 38px);
+            @include resa('padding', 3px);
+            @include resa('height', 17px);
+            @include resa('border-width', 0.3px);
+            @include resa('font-size', 12px);
+            @include resa('letter-spacing', -0.12px);
+        }
+    }
+    &__checkboxes{
+        &:not(:last-of-type){
+            @include resa('margin-bottom', 10px);
+        }
+    }
+    &__checkbox{
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+        background: transparent;
+        border: solid #000;
+        @include res('border-width', 1px);
+        @include res('width', 9px);
+        @include res('height', 9px);
+        transition: 300ms ease;
+        @include media(575){
+            @include resa('border-width', 1px);
+            @include resa('width', 9px);
+            @include resa('height', 9px);
+        }
+        &:checked {
+            border: solid #000;
+            @include res('border-width', 1px);
+            background: url(../img/tick.png) center / contain no-repeat;
+            @include media(575){
+                @include resa('border-width', 1px);
+            }
+        }
+    }
+    &__label{
+        cursor: pointer;
+        color: #000;
+        @include res('font-size', 12px);
+        @include res('letter-spacing', -0.12px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 400;
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('letter-spacing', -0.12px);
+        }
+    }
+}
