@@ -606,6 +606,131 @@
   margin-right: 0.5555555556vw;
 }
 
+.news {
+  padding-top: 4.8611111111vw;
+  padding-bottom: 4.1666666667vw;
+}
+
+.news__top {
+  pa-bottom: 2.0833333333vw;
+}
+
+.news__top-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news__top-right {
+  width: 100%;
+}
+
+.news__top-right .news__title {
+  margin-left: 1.3888888889vw;
+}
+
+.news__top-wrapper {
+  border-top: solid #000;
+  border-width: 0.0694444444vw;
+  padding-left: 1.3888888889vw;
+  margin-bottom: 2.0833333333vw;
+}
+
+.news__title {
+  color: #000;
+  font-size: 0.9722222222vw;
+  line-height: 120%;
+  letter-spacing: -0.0097222222vw;
+  font-weight: 400;
+  margin-bottom: 0.9722222222vw;
+}
+
+.news__img {
+  position: relative;
+  width: 24.375vw;
+  overflow: hidden;
+}
+
+.news__img img {
+  width: 100%;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.news__img img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.news__subtitle {
+  position: absolute;
+  color: #FFF;
+  font-size: 2.0833333333vw;
+  line-height: 120%;
+  letter-spacing: -0.0208333333vw;
+  font-style: normal;
+  font-weight: 700;
+  top: 1.9444444444vw;
+  left: 1.1111111111vw;
+}
+
+.news__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 0.9722222222vw;
+}
+
+.news__item:not(:last-of-type) {
+  padding-bottom: 1.1805555556vw;
+  border-bottom: solid #757575;
+  border-width: 0.0347222222vw;
+}
+
+.news__date {
+  color: #D02128;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  letter-spacing: -0.0083333333vw;
+  font-style: normal;
+  font-weight: 400;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  margin-right: 0.6944444444vw;
+}
+
+.news__desc {
+  max-width: 29.375vw;
+  width: 100%;
+  color: #000;
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  letter-spacing: -0.0083333333vw;
+  font-weight: 400;
+}
+
+.news__link {
+  color: #000;
+  font-size: 0.9722222222vw;
+  letter-spacing: -0.0097222222vw;
+  line-height: 120%;
+  font-style: normal;
+  font-weight: 400;
+}
+
 .no-webp .contacts {
   background: url("../img/map.png") center/cover no-repeat; }
 
