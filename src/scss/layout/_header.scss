@@ -203,9 +203,13 @@
     }
     &__dropdown{
         position: relative;
-        &.active{
+        &:hover{
             .header__arrow{
                 transform: rotate(-180deg);
+            }
+            .header__dropdown-content{
+                opacity: 1;
+                visibility: visible;
             }
         }
         &:first-of-type{
@@ -273,10 +277,6 @@
                 left: 0;
                 @include resa('border-radius', 8px);
                 @include resa('border-width', 1px);
-            }
-            &.active{
-                opacity: 1;
-                visibility: visible;
             }
         }
         &-li{

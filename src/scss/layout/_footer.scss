@@ -38,9 +38,10 @@
         @include res('letter-spacing', -0.12px);
         font-style: normal;
         font-weight: 400;
-        svg{
+        img{
             @include res('width', 18px);
             @include res('height', 18px);
+            @include res('min-width', 18px);
             @include res('margin-right', 10px);
             display: flex;
             align-items: center;

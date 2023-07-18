@@ -17,7 +17,6 @@
             @include resa('padding-right', 30px);
             @include resa('padding-left', 30px);
             @include resa('padding-bottom', 47px);
-            width: calc(100% + 9.375vw);
             height: max-content;
         }
     }
@@ -68,6 +67,17 @@
         @include res('margin-right', 20px);
         @include media(575){
             margin-right: 0;
+        }
+        &:hover{
+            .intro__dropdown-btn{
+                svg{
+                    transform: rotate(-180deg);
+                }
+            }
+            .intro__dropdown-content{
+                opacity: 1;
+                visibility: visible;
+            }
         }
         &:not(:last-of-type){
             @include media(575){
@@ -129,15 +139,6 @@
                 @include resa('border-radius', 15.5px);
                 @include resa('border-width', 1px);
             }
-            &.active{
-                svg{
-                    transform: rotate(-180deg)
-                }
-                & ~ .intro__dropdown-content{
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
             svg{
                 @include res('width', 12px);
                 display: flex;
@@ -168,8 +169,8 @@
             @include media(575){
                 @include resa('border-radius', 8px);
                 @include resa('border-width', 1px);
-                @include resa('padding-top', 7px);
-                @include resa('padding-bottom', 7px);
+                @include resa('padding-top', 12px);
+                @include resa('padding-bottom', 12px);
                 @include resa('padding-right', 15px);
                 @include resa('padding-left', 15px);
                 @include resa('left', 23px);
@@ -284,8 +285,14 @@
         }
     }
     &__checkboxes{
+        height: max-content;
+        display: flex;
+        align-items: center;
         &:not(:last-of-type){
-            @include resa('margin-bottom', 10px);
+            @include res('margin-bottom', 10px);
+            @include media(575){
+                @include resa('margin-bottom', 10px);
+            }
         }
     }
     &__checkbox{
@@ -300,10 +307,12 @@
         @include res('width', 9px);
         @include res('height', 9px);
         transition: 300ms ease;
+        @include res('margin-right', 5px);
         @include media(575){
             @include resa('border-width', 1px);
             @include resa('width', 9px);
             @include resa('height', 9px);
+            @include resa('margin-right', 5px);
         }
         &:checked {
             border: solid #000;
@@ -319,7 +328,7 @@
         color: #000;
         @include res('font-size', 12px);
         @include res('letter-spacing', -0.12px);
-        line-height: 120%;
+        line-height: 100%;
         font-style: normal;
         font-weight: 400;
         @include media(575){
