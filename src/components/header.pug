@@ -14,10 +14,12 @@ mixin header()
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
                                     li.header__dropdown-li Белгородская
-                                    li.header__dropdown-li Белгородская
-                                    li.header__dropdown-li Белгородская
-                                    li.header__dropdown-li Белгородская
-                                    li.header__dropdown-li Белгородская
+                                    li.header__dropdown-li Брянская область
+                                    li.header__dropdown-li Владимирская область
+                                    li.header__dropdown-li Воронежская область
+                                    li.header__dropdown-li Ивановская областьь
+                                    li.header__dropdown-li Калужская область
+                                    li.header__dropdown-li Костромская область
                             .header__dropdown 
                                 button(type="button").header__dropdown-button 
                                     img(src="@img/phone.svg", alt="" draggable="false").header__img
@@ -28,18 +30,19 @@ mixin header()
                                         a(href="#!").header__dropdown-link +7 (495) 64-614-64
                                     li.header__dropdown-li 
                                         a(href="#!").header__dropdown-link +7 (966) 119-57-08
-                            a(href="https://whatsapp.com").header__a 
+                            a(href="https://api.whatsapp.com/send?phone=79661195708").header__a 
                                 img(src="@img/whatsapp.svg", alt="" draggable="false") 
                             .header__dropdown 
                                 button(type="button").header__dropdown-button 
-                                    img(src="@img/telegram.svg", alt="" draggable="false").header__img
+                                    a(href="tg://resolve?domain=VF_Stroy").header__img 
+                                        img(src="@img/telegram.svg", alt="" draggable="false").header__img
                                     | Контакты
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
                                     li.header__dropdown-li 
-                                        a(href="#!").header__dropdown-link Контакты
+                                        a(href="#!").header__dropdown-link Наши контакты
                                     li.header__dropdown-li 
-                                        a(href="#!").header__dropdown-link Контакты
+                                        a(href="#!").header__dropdown-link Поставщикам
                         form(action="").header__form
                             input(type="text" placeholder="Поиск").header__input
                             button(type="submit").header__search
@@ -49,53 +52,49 @@ mixin header()
                                 button(type="button").header__dropdown-button Каталог проектов
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
-                                    li.header__dropdown-li Каталог проектов
-                                    li.header__dropdown-li Каталог проектов
-                                    li.header__dropdown-li Каталог проектов
-                                    li.header__dropdown-li Каталог проектов
+                                    li.header__dropdown-li Одноэтажные дома
+                                    li.header__dropdown-li Двухэтажные дома
+                                    li.header__dropdown-li Трехэтажные дома
+                                    li.header__dropdown-li Дома с подвалом/цокольным этажом
                                     li.header__dropdown-li Каталог проектов
                             .header__dropdown 
                                 button(type="button").header__dropdown-button Каталог материалов
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
-                                    li.header__dropdown-li Каталог материалов
-                                    li.header__dropdown-li Каталог материалов
-                                    li.header__dropdown-li Каталог материалов
-                                    li.header__dropdown-li Каталог материалов
-                                    li.header__dropdown-li Каталог материалов
+                                    li.header__dropdown-li Стеновые материалы
+                                    li.header__dropdown-li Фасадные материалы
+                                    li.header__dropdown-li Строительные смеси
+                                    li.header__dropdown-li Кровельные материалы
+                                    li.header__dropdown-li ЖБИ
+                                    li.header__dropdown-li Ландшафтные материалы
+                                    li.header__dropdown-li Изоляционные материалы
                             .header__dropdown 
                                 button(type="button").header__dropdown-button Строительство
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
-                                    li.header__dropdown-li Строительство
-                                    li.header__dropdown-li Строительство
-                                    li.header__dropdown-li Строительство
-                                    li.header__dropdown-li Строительство
-                                    li.header__dropdown-li Строительство
+                                    li.header__dropdown-li Репортажи с объектов
+                                    li.header__dropdown-li Карта строящихся объектов
+                                    li.header__dropdown-li Стоимость строительства дома
+                                    li.header__dropdown-li Строительство фундаментов
                             .header__dropdown 
                                 button(type="button").header__dropdown-button Услуги и цены
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
-                                    li.header__dropdown-li Консультация и расчет материалов
-                                    li.header__dropdown-li Индивидуальное проектирование
-                                    li.header__dropdown-li Расчет сметы на строительство
-                                    li.header__dropdown-li Строительство фундаментов
-                                    li.header__dropdown-li Шеф-монтаж выполненных работ
-                                    li.header__dropdown-li 3D моделирование
-                                    li.header__dropdown-li Проектирование и монтаж инженерных сетей
-                                    li.header__dropdown-li Проектирование и монтаж системы умного дома
+                                    a(href="#!").header__dropdown-li Кредит на дом
+                                    a(href="#!").header__dropdown-li Индивидуальное проектирование
+                                    a(href="#!").header__dropdown-li Проектирование и монтаж инженерных систем
                             .header__dropdown 
                                 button(type="button").header__dropdown-button Информация
                                     img(src="@img/arrow-down.svg", alt="" draggable="false").header__arrow
                                 ul.header__dropdown-content 
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
-                                    li.header__dropdown-li Информация
+                                    a.header__dropdown-li О компании 
+                                    a.header__dropdown-li Акции
+                                    a.header__dropdown-li Статьи о строительстве
+                                    a.header__dropdown-li Отзывы и предложения
+                                    a.header__dropdown-li Партнеры
+                                    a.header__dropdown-li Оплата и доставка
+                                    a.header__dropdown-li Информация
+                                    a.header__dropdown-li Вопросы и ответы
                 .header__top-right
                     .container 
                         ul.header__list 

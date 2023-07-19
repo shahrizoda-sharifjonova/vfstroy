@@ -284,7 +284,7 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  z-index: 1;
+  z-index: 52;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 300ms ease;
@@ -293,6 +293,7 @@
 }
 
 .header__dropdown-li {
+  display: block;
   cursor: pointer;
   width: 100%;
   color: #000;

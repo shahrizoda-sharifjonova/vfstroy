@@ -268,7 +268,7 @@
             @include res('max-width', 200px);
             width: max-content;
             height: max-content;
-            z-index: 1;
+            z-index: 52;
             opacity: 0;
             visibility: hidden;
             transition: 300ms ease;
@@ -280,6 +280,7 @@
             }
         }
         &-li{
+            display: block;
             cursor: pointer;
             width: 100%;
             color: #000;
